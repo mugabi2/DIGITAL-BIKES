@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuelhimself.bible1.More"
+    android:background="#ffffff"
+    >
+
+    <include layout="@layout/apptoolbar"
+        android:id="@+id/moretoolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/st"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:fontFamily="casual"
+            android:text="@string/safetyTips"
+            android:textAllCaps="false"
+            android:textSize="13pt" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6"
+            />
+
+        <Button
+            android:id="@+id/crd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:fontFamily="casual"
+            android:text="@string/credit"
+            android:textAllCaps="false"
+            android:textSize="13pt" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6"
+
+            ></View>
+    <!--
+        <Button
+            android:id="@+id/hist"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:fontFamily="casual"
+            android:text="@string/myhistory"
+            android:textAllCaps="false"
+            android:textSize="13pt"
+
+            />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6"
+
+            ></View>
+    -->
+        <Button
+            android:id="@+id/abt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:fontFamily="casual"
+            android:text="@string/about1"
+            android:textAllCaps="false"
+            android:textSize="13pt" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6"
+
+            ></View>
+
+        <Button
+            android:id="@+id/tad"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:onClick="TACwebsite"
+            android:fontFamily="casual"
+            android:text="@string/termsAndConditions"
+            android:textAllCaps="false"
+            android:textSize="13pt" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6"
+
+            ></View>
+
+        <Button
+            android:id="@+id/spt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:fontFamily="casual"
+            android:text="@string/support"
+            android:textAllCaps="false"
+            android:textSize="13pt" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:background="#ffffff"
+        >
+        <Button
+            android:id="@+id/hm1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_home2"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#ffffff"
+            />
+
+        <Button
+            android:id="@+id/parking3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/parkingpoints2"
+            android:text="@string/parkingPoints"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#ffffff"
+            />
+
+
+        <Button
+            android:drawableTop="@drawable/ic_more12"
+            android:id="@+id/more2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/more"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#ffffff"
+            />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

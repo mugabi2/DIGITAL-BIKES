@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuelhimself.bible1.About">
+
+    <include layout="@layout/apptoolbar"
+        android:id="@+id/aboutToolbar"
+        />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="420dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textForAbout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/aboutToolbar"
+        app:layout_constraintVertical_bias="0.672" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        >
+        <Button
+            android:id="@+id/hm3"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_home2"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            />
+
+        <Button
+            android:id="@+id/parking2"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/parkingpoints2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/parkingPoints"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            />
+
+
+        <Button
+            android:id="@+id/more3"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_more"
+            android:text="@string/more"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="368dp"
+        android:layout_height="0.5dp"
+        android:background="#f6f6f6"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="502dp" />
+
+
+</android.support.constraint.ConstraintLayout>
