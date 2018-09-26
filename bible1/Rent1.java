@@ -9,11 +9,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static com.example.samuelhimself.bible1.R.id.cash1;
+import static com.example.samuelhimself.bible1.R.id.digitaltime1;
+import static com.example.samuelhimself.bible1.R.id.fulltime;
+import static com.example.samuelhimself.bible1.R.id.radio_female;
 
 public class Rent1 extends AppCompatActivity {
 
     Button Bhom,Bmore,Bproceed;
+    String duration="half",payment="cash";
+    TextView Tcurrency;
+     int checkP=0,checkD=0,price,durationInt,paymentInt;
+     static final int rentPrice=1500;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +46,28 @@ public class Rent1 extends AppCompatActivity {
         Bproceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),rentingmap.class);
-                startActivity(int1);
+                if (checkP>=1&checkD>=1) {
+//LATEST ISSUEI IS HERER ERER HERE HRERE
+//                    if (duration.equals("half")) {
+//                        price=rentPrice*durationInt;
+
+                  RadioButton Rdigitime=(RadioButton)findViewById(R.id.digitaltime1);
+                            if (Rdigitime.isChecked()) {
+                                Toast.makeText(getApplicationContext(), "Please use cash Digital Time coming soon", Toast.LENGTH_SHORT).show();
+                            }
+                     else {
+                                Intent int1 = new Intent(getApplicationContext(), databaseConnect.class);
+                                int1.putExtra("DurationInt", durationInt);
+                                int1.putExtra("Duration", duration);
+                                int1.putExtra("PaymethodInt", paymentInt);
+                                int1.putExtra("Paymethod", payment);
+                                startActivity(int1);
+                    }
+//                    }
+                }
+                else {
+                   Toast.makeText(getApplicationContext(), "please check the buttons", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -75,6 +107,53 @@ public class Rent1 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void priceCalc(){
+    public void onRadioButtonClickedDuration(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.halftime:
+                if (checked){
+                    duration="half";
+                    durationInt=1;
+                    checkD++;
+                }
+                break;
+            case fulltime:
+                if (checked){
+                    duration="full";
+                    durationInt=2;
+                    checkD++;
+                }
+                break;
+        }
+
+    }
+
+    public void onRadioButtonClickedPayment(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.cash1:
+                if (checked){
+                    payment="cash";
+                    paymentInt=1;
+                    checkP++;
+                }
+                break;
+            case digitaltime1:
+                if (checked){
+//                    payment="DT";
+//                    paymentInt=2;
+//                    checkP++;
+                    Toast.makeText(getApplicationContext(), "Not yet available Coming soon", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+        }
+
     }
 }

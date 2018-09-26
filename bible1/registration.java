@@ -38,16 +38,17 @@ public class registration extends AppCompatActivity {
 
 
     String serverKey="2y10f2Kkl1GRi5si0AAsgvsgJWyqXsUszC3DuvRLwZZ";
-    private static final String SURNAME_KEY ="Surname:";
-    private static final String FIRST_NAME_KEY ="First name:";
-    private static final String PHONE_NUMBER_KEY ="Phone number:";
-    private static final String EMAIL_ADDRESS_KEY ="Email:";
-    private static final String RESIDENCE_KEY ="Residence:";
-    private static final String GENDER_KEY ="Gender:";
-    private static final String LOGIN_STATUS_KEY ="Login Status:";
+    private static final String SURNAME_KEY ="Surname";
+    private static final String FIRST_NAME_KEY ="First Name";
+    private static final String PHONE_NUMBER_KEY ="Phone Number";
+    private static final String EMAIL_ADDRESS_KEY ="Email";
+    private static final String RESIDENCE_KEY ="Residence";
+    private static final String GENDER_KEY ="Gender";
+    private static final String LOGIN_STATUS_KEY ="Login Status";
 
-    private SharedPreferences prefs;
-    private String prefName ="prefProfile";
+    private SharedPreferences prefs,prefl;
+    private String prefName ="preProfile";
+    private String preflogin="preflogin";
     static JSONObject jObj = null;
     static String json = "";
     String usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender,message;
@@ -71,31 +72,21 @@ public class registration extends AppCompatActivity {
 
 
     }
-    public void sendIntent(String s){
-        Intent intent=new Intent(this,Profile.class);
-        intent.putExtra("meso",s);
-    }
 
     public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.radio_male:
                 if (checked){
                     sex="M";
                 }
-                    // Pirates are the best
                     break;
             case radio_female:
                 if (checked){
                     sex="F";
                 }
-                    // Ninjas rule
                     break;
         }
-
     }
 
         public void regMe(View view){
@@ -106,21 +97,17 @@ public class registration extends AppCompatActivity {
         String email =eemail.getText().toString();
         String psword =epassword.getText().toString();
         String resid =eresi.getText().toString();
+ 
 
-//        backgroundreg bg = new backgroundreg(this);
-//        bg.execute(sname,fname,phone,email,psword,resid,sex);
-            new backgroundregistration(this).execute(sname,fname,phone,email,psword,resid,sex);
+            //Checking if all fields have been filled
+            if(!sname.isEmpty() && !fname.isEmpty() && !phone.isEmpty() && !email.isEmpty() && !psword.isEmpty() &&!resid.isEmpty()){
 
-
-//           TextView resultDisplay=(TextView)findViewById(R.id.textdisplay);
-//            resultDisplay.setText(prefs.getString(SURNAME_KEY,""));
-
-
-//            prefs=getSharedPreferences(prefName, MODE_PRIVATE);
-
-
-            prefs=getSharedPreferences(prefName, MODE_PRIVATE);
-            Toast.makeText(getApplicationContext(),prefs.getString(SURNAME_KEY,""),Toast.LENGTH_SHORT).show();
+                        new backgroundregistration(this).execute(sname,fname,phone,email,psword,resid,sex);
+                        Log.d("Request status","GOOD INPUT am gonna make the request");
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"Please fill in all fields",Toast.LENGTH_LONG).show();
+            }
 
     }
     //##################BACK GROUND CLASSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$444444444
@@ -136,16 +123,18 @@ public class registration extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-//                dialog= new AlertDialog.Builder(context).create();
-//                   dialog.setTitle("login status");
         }
 
         @Override
         protected void onPostExecute(String s) {
-//                    dialog.setMessage(s);
-//                    dialog.show();
-//      new registration().savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender,loginStatus);
-
+            prefl=getSharedPreferences(preflogin, MODE_PRIVATE);
+            if (prefl.getBoolean(LOGIN_STATUS_KEY,true)){
+                Intent intent= new Intent(registration.this,MainActivity.class);
+                startActivity(intent);
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"Phone number already used",Toast.LENGTH_LONG).show();
+            }
         }
 
         @Override
@@ -160,7 +149,7 @@ public class registration extends AppCompatActivity {
             String sex=voids[6];
 
 
-            String connstr="http://192.168.43.189/bikephp/sign_up.php";
+            String connstr="http://192.168.43.113/bikephp/user_sign_up.php";
 
             try {
                 URL url =new URL(connstr);
@@ -214,25 +203,45 @@ public class registration extends AppCompatActivity {
                             useremailadd=user.getString("EM");
                             userresidence=user.getString("RD");
                             usergender=user.getString("GD");
+
+                            prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                            SharedPreferences.Editor editor=prefl.edit();
                             loginStatus=Boolean.TRUE;
+                            editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                            editor.commit();
                             Log.d("JSONStatus","Login success");
 
 
 
 //make SHARED PREFS A METHOD
 
-                      savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender,loginStatus);
+                      savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender);
 
 
                         }else{
+                            prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                            SharedPreferences.Editor editor=prefl.edit();
+                            loginStatus=Boolean.FALSE;
+                            editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                            editor.commit();
                             Log.d("JSONStatus","Login failure");
                             message=jObj.getString("message");
                             Log.d("JSONStatus",message);
                         }
                     }else{
+                        prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                        SharedPreferences.Editor editor=prefl.edit();
+                        loginStatus=Boolean.FALSE;
+                        editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                        editor.commit();
                         Log.e("JSON Parser", "RETURNED JSON IS NULL ");
                     }
                 } catch (JSONException e) {
+                    prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                    SharedPreferences.Editor editor=prefl.edit();
+                    loginStatus=Boolean.FALSE;
+                    editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                    editor.commit();
                     Log.e("JSON Parser", "Error creating the json object " + e.toString());
                 }
 //##################################################################33
@@ -240,12 +249,27 @@ public class registration extends AppCompatActivity {
                 return result;
 
             } catch (MalformedURLException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             } catch (ProtocolException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             } catch (IOException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             }
@@ -256,7 +280,7 @@ public class registration extends AppCompatActivity {
 
     }
 
-    public  void savingToSharedPrefs( String Ssurname,String Sfirstname,String Sphonenumb,String Semail,String Sresidence,String Sgender, Boolean SloginStatus){
+    public  void savingToSharedPrefs( String Ssurname,String Sfirstname,String Sphonenumb,String Semail,String Sresidence,String Sgender){
         //shared prefs#########################################
         prefs=getSharedPreferences(prefName, MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();
@@ -268,7 +292,6 @@ public class registration extends AppCompatActivity {
         editor.putString(EMAIL_ADDRESS_KEY, Semail);
         editor.putString(RESIDENCE_KEY, Sresidence);
         editor.putString(GENDER_KEY, Sgender);
-        editor.putBoolean(LOGIN_STATUS_KEY,SloginStatus);
 
         //---saves the values---
         editor.commit();

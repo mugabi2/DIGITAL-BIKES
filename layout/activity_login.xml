@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.samuelhimself.bible1.MainActivity">
+    android:background="#ffffff"
+    tools:layout_editor_absoluteY="81dp">
 
 
     <TextView
@@ -41,11 +42,6 @@
 
 
         <!-- Email Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
 
             <EditText
                 android:id="@+id/input_phone"
@@ -53,14 +49,10 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/phonenumber"
                 android:inputType="phone" />
-        </android.support.design.widget.TextInputLayout>
+
 
         <!-- Password Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
+
 
             <EditText
                 android:id="@+id/input_password"
@@ -68,26 +60,25 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword" />
-        </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.AppCompatButton
+
+        <Button
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="logMeIn"
             android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
-            android:padding="12dp"
             android:text="Login" />
-
-        <TextView
-            android:id="@+id/link_signup"
+        <Button
+            android:id="@+id/createAccount"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="createAccount"
             android:layout_marginBottom="24dp"
-            android:gravity="center"
-            android:text="No account yet? Create one"
-            android:textSize="16dip" />
+            android:layout_marginTop="24dp"
+            android:text="@string/createAccount" />
 
     </LinearLayout>
 

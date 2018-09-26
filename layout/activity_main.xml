@@ -54,7 +54,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/instructions"
+                android:text="@string/tutorial"
                 android:textAllCaps="false"
                 android:textSize="7pt" />
 

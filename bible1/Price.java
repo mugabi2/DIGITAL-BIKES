@@ -9,10 +9,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Price extends AppCompatActivity {
 
     Button Bsub;
+    TextView Tprice,Ttime,Tbike;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class Price extends AppCompatActivity {
         Bsub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
+                Intent int1 =new Intent(getApplicationContext(),returnBike.class);
                 startActivity(int1);
             }
         });
@@ -31,6 +33,19 @@ public class Price extends AppCompatActivity {
         Toolbar toolbar =findViewById(R.id.pricetoolbar);
         setSupportActionBar(toolbar);
 
+        Bundle extras=getIntent().getExtras();
+        int cash=extras.getInt("px");
+        int time=extras.getInt("yt");
+        String bikeno=extras.getString("bn");
+
+        Tprice=(TextView)findViewById(R.id.textprice1);
+        Tprice.setText(Integer.toString(cash));
+
+        Ttime=(TextView)findViewById(R.id.textyourtime);
+        Ttime.setText(Integer.toString(time));
+
+        Tbike=(TextView)findViewById(R.id.textbikenumber);
+        Tbike.setText(bikeno);
 
 
     }

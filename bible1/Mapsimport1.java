@@ -69,6 +69,11 @@ public class Mapsimport1 extends FragmentActivity implements OnMapReadyCallback,
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         isNetworkConnected();
+
+     //   Bundle extras=getIntent().getExtras();
+//        Toast.makeText(getApplicationContext(),extras.getInt("money"),Toast.LENGTH_LONG).show();
+
+
     }
 
 

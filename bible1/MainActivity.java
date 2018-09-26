@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //  -------------toolbar---------
         Toolbar toolbar =findViewById(R.id.homeToolbar);
         setSupportActionBar(toolbar);
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Brent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),Mapsimport1.class);
+                Intent int1 =new Intent(getApplicationContext(),Rent1.class);
                 startActivity(int1);
             }
         });

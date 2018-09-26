@@ -45,7 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/phonenumber" />
+            android:hint="@string/phonenumber"
+            android:inputType="phone"/>
 
         <EditText
             android:id="@+id/Eemail"
@@ -122,22 +123,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:background="@null"
+            android:onClick="logMeIn"
             android:text="link_login"
             android:textColor="@android:color/black" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:textSize="8pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

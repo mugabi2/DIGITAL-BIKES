@@ -33,7 +33,7 @@ public class More extends AppCompatActivity {
         Bpark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),parkingPointsMap.class);
+                Intent int1 =new Intent(getApplicationContext(),LOGIN.class);
                 startActivity(int1);
             }
         });

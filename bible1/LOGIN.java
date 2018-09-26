@@ -36,21 +36,22 @@ import static com.example.samuelhimself.bible1.R.id.radio_female;
 
 public class LOGIN extends AppCompatActivity {
     String serverKey="2y10f2Kkl1GRi5si0AAsgvsgJWyqXsUszC3DuvRLwZZ";
-    Button Bhom,Bmore;
+    Button Bhom,Bmore,Blogin;
     EditText ephone,epassword;
 
-    private static final String SURNAME_KEY ="Surname:";
-    private static final String FIRST_NAME_KEY ="First name:";
-    private static final String PHONE_NUMBER_KEY ="Phone number:";
-    private static final String EMAIL_ADDRESS_KEY ="Email:";
-    private static final String RESIDENCE_KEY ="Residence:";
-    private static final String LOGIN_STATUS_KEY ="Login Status:";
+    private static final String SURNAME_KEY ="Surname";
+    private static final String FIRST_NAME_KEY ="First Name";
+    private static final String PHONE_NUMBER_KEY ="Phone Number";
+    private static final String EMAIL_ADDRESS_KEY ="Email";
+    private static final String RESIDENCE_KEY ="Residence";
+    private static final String LOGIN_STATUS_KEY ="Login Status";
 
-    private SharedPreferences prefs;
-    private String prefName ="prefProfile";
+    private SharedPreferences prefs,prefl;
+    private String prefName ="preProfile";
+    private String preflogin="preflogin";
     static JSONObject jObj = null;
     static String json = "";
-    String usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender,message;
+    String usersurname,userfirstname,userphonenumb,useremailadd,userresidence,message;
     Boolean loginStatus;
 
     @Override
@@ -61,21 +62,16 @@ public class LOGIN extends AppCompatActivity {
         ephone=(EditText)findViewById(R.id.input_phone);
         epassword=(EditText)findViewById(R.id.input_password);
 
-    }
-    public void sendIntent(String s){
-        Intent intent=new Intent(this,Profile.class);
-        intent.putExtra("meso",s);
+        Blogin=(Button)findViewById(R.id.btn_login);
+
     }
 
-    public void logMeIn(View view){
+    public void logMeIn(View v){
 
         String phone =ephone.getText().toString();
         String psword =epassword.getText().toString();
 
         new LOGIN.backgroundlogin(this).execute(phone,psword);
-
-        prefs=getSharedPreferences(prefName, MODE_PRIVATE);
-        Toast.makeText(getApplicationContext(),prefs.getString(SURNAME_KEY,""),Toast.LENGTH_SHORT).show();
 
     }
     //##################BACK GROUND CLASSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$444444444
@@ -85,7 +81,6 @@ public class LOGIN extends AppCompatActivity {
         Context context;
         public backgroundlogin(Context context){
             this.context=context;
-
         }
 
         @Override
@@ -96,10 +91,19 @@ public class LOGIN extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-                    dialog.setMessage(s);
-                    dialog.show();
+//                    dialog.setMessage(s);
+//                    dialog.show();
 //      new registration().savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence,usergender,loginStatus);
+            prefl=getSharedPreferences(preflogin, MODE_PRIVATE);
 
+            if(prefl.getBoolean(LOGIN_STATUS_KEY,true)){
+                Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(int1);
+            }
+            else {
+
+                Toast.makeText(getApplicationContext(),"Please input correct credentials",Toast.LENGTH_SHORT).show();
+            }
         }
 
         @Override
@@ -109,7 +113,7 @@ public class LOGIN extends AppCompatActivity {
             String phonenum=voids[0];
             String pass=voids[1];
 
-            String connstr="http://192.168.43.189/bikephp/login.php";
+            String connstr="http://192.168.43.113/bikephp/user_login.php";
 
             try {
                 URL url =new URL(connstr);
@@ -143,6 +147,8 @@ public class LOGIN extends AppCompatActivity {
                 json = result.toString();
 
                 try {
+
+
                     jObj = new JSONObject(json);
                     if(json!=null){
                         int success=jObj.getInt("success");
@@ -157,25 +163,42 @@ public class LOGIN extends AppCompatActivity {
                             userphonenumb=user.getString("PN");
                             useremailadd=user.getString("EM");
                             userresidence=user.getString("RD");
+
+                            prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                            SharedPreferences.Editor editor=prefl.edit();
                             loginStatus=Boolean.TRUE;
+                            editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                            editor.commit();
                             Log.d("JSONStatus","Login success");
 
-
-
 //make SHARED PREFS A METHOD
-
-                            savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence,loginStatus);
+                            savingToSharedPrefs(usersurname,userfirstname,userphonenumb,useremailadd,userresidence);
 
 
                         }else{
+                            prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                            SharedPreferences.Editor editor=prefl.edit();
+                            loginStatus=Boolean.FALSE;
+                            editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                            editor.commit();
                             Log.d("JSONStatus","Login failure");
                             message=jObj.getString("message");
                             Log.d("JSONStatus",message);
                         }
                     }else{
+                        prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                        SharedPreferences.Editor editor=prefl.edit();
+                        loginStatus=Boolean.FALSE;
+                        editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                        editor.commit();
                         Log.e("JSON Parser", "RETURNED JSON IS NULL ");
                     }
                 } catch (JSONException e) {
+                    prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                    SharedPreferences.Editor editor=prefl.edit();
+                    loginStatus=Boolean.FALSE;
+                    editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                    editor.commit();
                     Log.e("JSON Parser", "Error creating the json object " + e.toString());
                 }
 //##################################################################33
@@ -183,12 +206,27 @@ public class LOGIN extends AppCompatActivity {
                 return result;
 
             } catch (MalformedURLException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             } catch (ProtocolException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             } catch (IOException e) {
+                prefl=getSharedPreferences(preflogin,MODE_PRIVATE);
+                SharedPreferences.Editor editor=prefl.edit();
+                loginStatus=Boolean.FALSE;
+                editor.putBoolean(LOGIN_STATUS_KEY,loginStatus);
+                editor.commit();
                 Log.d("JSON Exception",e.toString());
                 result =e.getMessage();
             }
@@ -199,7 +237,7 @@ public class LOGIN extends AppCompatActivity {
 
     }
 
-    public  void savingToSharedPrefs( String Ssurname,String Sfirstname,String Sphonenumb,String Semail,String Sresidence, Boolean SloginStatus){
+    public  void savingToSharedPrefs( String Ssurname,String Sfirstname,String Sphonenumb,String Semail,String Sresidence){
         //shared prefs#########################################
         prefs=getSharedPreferences(prefName, MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();
@@ -210,11 +248,8 @@ public class LOGIN extends AppCompatActivity {
         editor.putString(PHONE_NUMBER_KEY, Sphonenumb);
         editor.putString(EMAIL_ADDRESS_KEY, Semail);
         editor.putString(RESIDENCE_KEY, Sresidence);
-        editor.putBoolean(LOGIN_STATUS_KEY,SloginStatus);
-
         //---saves the values---
         editor.commit();
-
         Log.d("JSONStatus","saved to prefs successfully");
     }
 
@@ -228,5 +263,10 @@ public class LOGIN extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void createAccount(View view){
+        Intent intent= new Intent(this,registration.class);
+        startActivity(intent);
     }
 }

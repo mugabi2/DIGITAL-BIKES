@@ -16,18 +16,22 @@ public class Promotions extends AppCompatActivity {
 
     Button Bhom,Bmore,Bshare;
     TextView Tdigitaltime;
-    private String prefName ="prefprofile";
     private static final String RESIDENCE_KEY ="Residence:";
+
+    private SharedPreferences prefs;
+    private String prefName ="prefProfile";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotions);
-        SharedPreferences prefs = getSharedPreferences(prefName, MODE_PRIVATE);
-        String store=prefs.getString(RESIDENCE_KEY,"");
 
-        Tdigitaltime.append(store);
+        prefs = getSharedPreferences(prefName, MODE_PRIVATE);
+
+        Tdigitaltime=(TextView)findViewById(R.id.textdigitaltime);
+        Tdigitaltime.append(prefs.getString(RESIDENCE_KEY,""));
 
         //  -------------toolbar---------
         Toolbar toolbar =findViewById(R.id.promotoolbar);
