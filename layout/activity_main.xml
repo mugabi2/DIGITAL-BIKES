@@ -8,10 +8,6 @@
     android:background="#ffffff">
 
 
-    <include layout="@layout/apptoolbar"
-        android:id="@+id/homeToolbar"
-        />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -37,24 +33,28 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/rab"
+                android:id="@+id/confirm1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="#ffffff"
-                android:text="@string/rentABike"
+                android:onClick="getRequests"
+                android:text="@string/confirmreq"
                 android:textAllCaps="false"
+                android:fontFamily="casual"
                 android:textSize="7pt" />
 
             <Button
-                android:id="@+id/inst"
+                android:id="@+id/returnReq"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
+                android:onClick="getReturnRequests"
+                android:fontFamily="casual"
                 android:gravity="center"
-                android:text="@string/instructions"
+                android:text="@string/returnbike"
                 android:textAllCaps="false"
                 android:textSize="7pt" />
 
@@ -70,28 +70,27 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/prom"
-
+                android:id="@+id/bicyclesIn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:fontFamily="casual"
                 android:gravity="center"
-                android:text="@string/promotions"
+                android:text="@string/bicyclesin"
                 android:textAllCaps="false"
                 android:textSize="7pt" />
 
             <Button
 
-                android:id="@+id/evt"
+                android:id="@+id/bicyclesOut"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:fontFamily="casual"
                 android:gravity="center"
-                android:text="@string/events"
+                android:text="@string/bicyclesout"
                 android:textAllCaps="false"
                 android:textSize="7pt"
 
@@ -126,39 +125,37 @@
 
         <Button
 
-            android:id="@+id/hm0"
+            android:id="@+id/bikebalancing1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#ffffff"
-            android:drawableTop="@drawable/ic_home13"
+            android:text="@string/bikeBalancing"
             android:fontFamily="sans-serif"
-            android:text="@string/home"
+
             android:textAllCaps="false"
             android:textSize="7pt" />
 
         <Button
-            android:id="@+id/parking1"
+            android:id="@+id/revenue1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#fffffF"
-            android:drawableTop="@drawable/parkingpoints2"
             android:fontFamily="sans-serif"
-            android:text="@string/parkingPoints"
+            android:text="@string/revenue"
             android:textAllCaps="false"
             android:textSize="7pt" />
 
 
         <Button
-            android:id="@+id/more1"
+            android:id="@+id/profile1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#fffffF"
-            android:drawableTop="@drawable/ic_more"
             android:fontFamily="sans-serif"
-            android:text="@string/more"
+            android:text="@string/profile"
             android:textAllCaps="false"
             android:textSize="6pt" />
 
@@ -179,8 +176,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161"
-        app:srcCompat="@drawable/bicycle3s1" />
+        app:layout_constraintVertical_bias="0.161" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -5,11 +5,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="8dp"
@@ -21,8 +21,10 @@
         android:paddingRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <EditText
@@ -39,19 +41,32 @@
             android:ems="10"
             android:hint="@string/fname" />
 
-
         <EditText
             android:id="@+id/phonenum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/phonenumber" />
+            android:hint="@string/phonenumber"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/altphonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/altphonenumber"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/nationalid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nin" />
 
         <EditText
             android:id="@+id/Eemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
@@ -59,7 +74,6 @@
             android:id="@+id/Ppassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword" />
 
@@ -67,7 +81,6 @@
             android:id="@+id/resi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="Residence" />
 
         <LinearLayout
@@ -96,48 +109,54 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:onClick="onRadioButtonClicked"
-                    android:text="male" />
+                    android:text="male"
+                    android:textSize="7pt" />
 
                 <RadioButton
                     android:id="@+id/radio_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:text="female" />
+                    android:text="female"
+                    android:textSize="7pt" />
             </RadioGroup>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:onClick="regMe"
-            android:text="sign_up"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/btn_link_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="@null"
-            android:text="link_login"
-            android:textColor="@android:color/black" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textdisplay"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="regMe"
+        android:text="@string/signUp"
+        android:textColor="@android:color/white"
         android:textSize="8pt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <Button
+        android:id="@+id/btn_link_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="logMeIn"
+        android:text="@string/login"
+        android:textColor="@android:color/black"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup" />
+
 </android.support.constraint.ConstraintLayout>
