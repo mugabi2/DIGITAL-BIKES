@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class More extends AppCompatActivity {
 
-    Button Bsafe,Bcred,Babout,Bpfile,Bspt,Bhist,Bhm,Bpark;
+    Button Bsafe,Bcred,Babout,Bpfile,Bspt,Bhist,Bhm,Bpark, Bsafe1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,17 +26,20 @@ public class More extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
                 startActivity(int1);
+
             }
         });
 
-        Bpark= findViewById(R.id.parking3);
-        Bpark.setOnClickListener(new View.OnClickListener() {
+        Bsafe1= findViewById(R.id.st1);
+        Bsafe1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),parkingPointsMap.class);
+                Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
                 startActivity(int1);
+
             }
         });
+
 
         Babout= findViewById(R.id.abt);
         Babout.setOnClickListener(new View.OnClickListener() {
@@ -44,17 +47,10 @@ public class More extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),About.class);
                 startActivity(int1);
+
             }
         });
 
-        Bcred= findViewById(R.id.crd);
-        Bcred.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),Credit.class);
-                startActivity(int1);
-            }
-        });
 
         Bspt= findViewById(R.id.spt);
         Bspt.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +58,7 @@ public class More extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),Support.class);
                 startActivity(int1);
+
             }
         });
 
@@ -83,6 +80,7 @@ public class More extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -106,10 +104,10 @@ public class More extends AppCompatActivity {
     //terms and conds wesite link
 
     public void TACwebsite(View view){
-    Intent TACweblink=new Intent(Intent.ACTION_VIEW, Uri.parse("http/www.google.com"));
-    startActivity(TACweblink);
-
-
+        Intent browserIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("http://stardigitalbikes.com/terms_and_conditions.php"));
+        startActivity(browserIntent);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -117,6 +115,7 @@ public class More extends AppCompatActivity {
             case R.id.usermenu:
                 Intent int1 =new Intent(getApplicationContext(),Profile.class);
                 startActivity(int1);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);

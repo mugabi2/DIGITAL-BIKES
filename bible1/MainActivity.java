@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
@@ -18,12 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button Brent,Bevents,Bpromo,Binst,Bmore,Bparking;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //  -------------toolbar---------
         Toolbar toolbar =findViewById(R.id.homeToolbar);
@@ -34,17 +35,21 @@ public class MainActivity extends AppCompatActivity {
         Brent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),Mapsimport1.class);
+                Intent int1 =new Intent(getApplicationContext(),Rent1.class);
                 startActivity(int1);
             }
         });
 
-        Bparking= findViewById(R.id.parking1);
+
+
+        Bparking= findViewById(R.id.safety1);
         Bparking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),registration.class);
+
+                Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
                 startActivity(int1);
+
             }
         });
 
@@ -79,8 +84,12 @@ public class MainActivity extends AppCompatActivity {
         Bpromo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),Promotions.class);
-                startActivity(int1);
+                Intent int1 =new Intent(Intent.ACTION_SEND);
+                int1.setType("text/plain");
+                String shareBody ="Click on the link below to download Digital Bikes app";
+                int1.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                int1.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(int1, "Share"));
             }
         });
 
@@ -105,6 +114,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onBackPressed(){
+        moveTaskToBack(true);
     }
 
     /* EditText username = (EditText)findViewById(R.id.edit1);

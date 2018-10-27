@@ -1,9 +1,11 @@
 package com.example.samuelhimself.bible1;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,7 +14,7 @@ import android.widget.Button;
 
 public class Support extends AppCompatActivity {
 
-    Button Bhom,Bmore;
+    Button Bhom,Bmore,Bcall,Bmail,Bsafe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class Support extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -35,6 +38,27 @@ public class Support extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),More.class);
                 startActivity(int1);
+                finish();
+            }
+        });
+
+        Bsafe= findViewById(R.id.safety5);
+        Bsafe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
+                startActivity(int1);
+                finish();
+            }
+        });
+        Bcall= findViewById(R.id.callhelp);
+        Bcall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int1 =new Intent(Intent.ACTION_DIAL);
+                int1.setData(Uri.parse("tel:0704975898"));
+                startActivity(int1);
+                Log.d("DIAL","CLICKED CALLING-------------");
             }
         });
         //  -------------toolbar---------
@@ -56,6 +80,7 @@ public class Support extends AppCompatActivity {
             case R.id.usermenu:
                 Intent int1 =new Intent(getApplicationContext(),Profile.class);
                 startActivity(int1);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);

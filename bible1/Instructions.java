@@ -13,7 +13,7 @@ import android.widget.Button;
 public class Instructions extends AppCompatActivity {
 
 
-    Button Bhom,Bmore;
+    Button Bhom,Bmore,Bsafe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class Instructions extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -36,9 +37,18 @@ public class Instructions extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),More.class);
                 startActivity(int1);
+                finish();
             }
         });
-
+        Bsafe= findViewById(R.id.safety3);
+        Bsafe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
+                startActivity(int1);
+                finish();
+            }
+        });
         //  -------------toolbar---------
         Toolbar toolbar =findViewById(R.id.insttoolbar);
         setSupportActionBar(toolbar);
@@ -59,6 +69,7 @@ public class Instructions extends AppCompatActivity {
             case R.id.usermenu:
                 Intent int1 =new Intent(getApplicationContext(),Profile.class);
                 startActivity(int1);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);

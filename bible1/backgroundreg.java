@@ -91,7 +91,7 @@ public class backgroundreg extends AsyncTask<String, Void,String> {
 
 
 
-        String connstr="http://192.168.43.189/bikephp/sign_up.php";
+        String connstr="http://stardigitalbikes.com/bikephp/sign_up.php";
 
         try {
             URL url =new URL(connstr);

@@ -36,21 +36,6 @@
             android:textAllCaps="false"
             android:textSize="13pt" />
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="0.5dp"
-            android:background="#f6f6f6"
-            />
-
-        <Button
-            android:id="@+id/crd"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="#ffffff"
-            android:fontFamily="casual"
-            android:text="@string/credit"
-            android:textAllCaps="false"
-            android:textSize="13pt" />
 
         <View
             android:layout_width="300dp"
@@ -58,26 +43,7 @@
             android:background="#f6f6f6"
 
             ></View>
-    <!--
-        <Button
-            android:id="@+id/hist"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="#ffffff"
-            android:fontFamily="casual"
-            android:text="@string/myhistory"
-            android:textAllCaps="false"
-            android:textSize="13pt"
 
-            />
-
-        <View
-            android:layout_width="300dp"
-            android:layout_height="0.5dp"
-            android:background="#f6f6f6"
-
-            ></View>
-    -->
         <Button
             android:id="@+id/abt"
             android:layout_width="match_parent"
@@ -155,12 +121,12 @@
             />
 
         <Button
-            android:id="@+id/parking3"
+            android:id="@+id/st1"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableTop="@drawable/parkingpoints2"
-            android:text="@string/parkingPoints"
+            android:drawableTop="@drawable/ic_safe1"
+            android:text="@string/safetyTips"
             android:textAllCaps="false"
             android:textSize="7pt"
             android:fontFamily="sans-serif"

@@ -27,14 +27,16 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(int1);
+                finish();
             }
         });
         Bpark= findViewById(R.id.parking2);
         Bpark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 =new Intent(getApplicationContext(),parkingPointsMap.class);
+                Intent int1 =new Intent(getApplicationContext(),SafetyTips.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -44,6 +46,7 @@ public class About extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),More.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -66,6 +69,7 @@ public class About extends AppCompatActivity {
             case R.id.usermenu:
                 Intent int1 =new Intent(getApplicationContext(),Profile.class);
                 startActivity(int1);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);

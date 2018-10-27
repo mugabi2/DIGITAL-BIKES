@@ -11,22 +11,34 @@
         android:id="@+id/aboutToolbar"
         />
 
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="420dp"
-        android:layout_marginBottom="29dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginStart="29dp"
+    <ScrollView
+        android:layout_width="321dp"
+        android:layout_height="431dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/textForAbout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutToolbar"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="29dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/textForAbout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/aboutToolbar"
+            app:layout_constraintVertical_bias="0.672" />
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -59,10 +71,10 @@
             android:id="@+id/parking2"
             android:background="#ffffff"
             android:layout_weight="1"
-            android:drawableTop="@drawable/parkingpoints2"
+            android:drawableTop="@drawable/ic_safe1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/parkingPoints"
+            android:text="@string/safetyTips"
             android:textAllCaps="false"
             android:textSize="7pt"
             android:fontFamily="sans-serif"

@@ -57,6 +57,7 @@ public class SafetyTips extends AppCompatActivity {
             case R.id.usermenu:
                 Intent int1 =new Intent(getApplicationContext(),Profile.class);
                 startActivity(int1);
+                finish();
 
         }
         return super.onOptionsItemSelected(item);
