@@ -6,135 +6,193 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:background="#00ffff">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:isScrollContainer="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <EditText
-            android:id="@+id/sname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/sname" />
-
-        <EditText
-            android:id="@+id/fname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/fname" />
-
-
-        <EditText
-            android:id="@+id/phonenum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/phonenumber"
-            android:inputType="phone"/>
-
-        <EditText
-            android:id="@+id/Eemail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/Ppassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword" />
-
-        <EditText
-            android:id="@+id/resi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Residence" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/gender_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="15dp"
-                android:text="@string/gender"
-                android:textSize="20dp" />
 
-            <RadioGroup
-                android:id="@+id/radio_group1"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/sname"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/name_draw2"
+                android:ems="10"
+                android:hint="@string/sname"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/name_draw2"
+                android:ems="10"
+                android:hint="@string/fname"
+                android:textSize="7pt" />
+
+
+            <EditText
+                android:id="@+id/phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/phone_draw1"
+                android:ems="10"
+                android:hint="@string/phonenumber"
+                android:inputType="phone"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/Eemail"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/email_draw1"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="5dp"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/Ppassword"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/pass_draw1"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textSize="7pt" />
+
+            <EditText
+                android:id="@+id/resi"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/ic_home2"
+                android:ems="10"
+                android:hint="Residence"
+                android:textSize="7pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/gender_textview"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/radio_male"
+                <TextView
+                    android:id="@+id/gender_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="male" />
+                    android:paddingRight="7dp"
+                    android:text="@string/gender"
+                    android:textColor="#00003a"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="8pt" />
 
-                <RadioButton
-                    android:id="@+id/radio_female"
+                <RadioGroup
+                    android:id="@+id/radio_group1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="female" />
-            </RadioGroup>
+                    android:layout_toRightOf="@+id/gender_textview"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="male"
+                        android:textColor="#00003a"
+                        android:textSize="7pt" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="female"
+                        android:textColor="#00003a"
+                        android:textSize="7pt" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please come with your University Identity Card to complete registration"
+                android:textColor="#ff0000"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round1"
+                android:onClick="regMe"
+                android:text="sign up"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btn_link_login"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round1"
+                android:onClick="logMeIn"
+                android:text="Login link"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="TACwebsite"
+                android:text="By clicking sign up you agree to the Terms and Conditions of Digital Bikes. Click here for the terms and condition"
+                android:textColor="#a9a9a9"
+                android:textSize="7pt" />
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please come with your University Identity Card to complete registration"
-            android:textSize="7pt"
-            />
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:onClick="regMe"
-            android:text="sign_up"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/btn_link_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="@null"
-            android:onClick="logMeIn"
-            android:text="Login link"
-            android:textColor="@android:color/black" />
-
-    </LinearLayout>
+    </ScrollView>
 
     <ProgressBar
         android:id="@+id/progressBar4"

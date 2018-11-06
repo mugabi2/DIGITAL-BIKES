@@ -197,6 +197,10 @@ public class returnBike extends AppCompatActivity {
 
     }
 
+    public void onBackPressed(){
+        moveTaskToBack(true);
+    }
+
     public void pogless() {
 
         new Thread(new Runnable() {

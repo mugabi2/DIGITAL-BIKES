@@ -25,6 +25,7 @@ public class SafetyTips extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(int1);
+                finish();
             }
         });
 
@@ -35,6 +36,7 @@ public class SafetyTips extends AppCompatActivity {
             public void onClick(View view) {
                 Intent int1 =new Intent(getApplicationContext(),More.class);
                 startActivity(int1);
+                finish();
             }
         });
         //  -------------toolbar---------

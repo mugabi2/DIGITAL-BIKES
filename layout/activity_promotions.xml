@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     tools:context="com.example.samuelhimself.bible1.Promotions"
     tools:layout_editor_absoluteY="81dp">
 
@@ -13,7 +12,8 @@
 
 
     <LinearLayout
-        android:background="#ffffff"
+        android:background="#fafafa"
+        android:textColor="#00003a"
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="45dp"
@@ -30,7 +30,8 @@
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             android:id="@+id/hm12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +43,8 @@
             android:textSize="7pt" />
 
         <Button
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -55,7 +57,8 @@
 
         <Button
             android:id="@+id/more12"
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -89,6 +92,7 @@
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="24"
+        android:textColor="#00003a"
         android:textSize="40pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.422"
@@ -103,6 +107,7 @@
         android:layout_marginTop="120dp"
         android:text="@string/hrs"
         android:textSize="17pt"
+        android:textColor="#00003a"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,6 +121,7 @@
         android:background="#40e0d0"
         android:text="@string/shareCodeToEarnDigitalTime"
         android:textSize="8pt"
+        android:textColor="#00003a"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -129,6 +135,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
+        android:background="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -146,6 +153,7 @@
             android:gravity="center"
             android:text="@string/howToEarnDigitalTime"
             android:textSize="12pt"
+            android:textColor="#00003a"
             app:layout_constraintBottom_toTopOf="@+id/textView24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -159,7 +167,8 @@
             android:layout_marginStart="28dp"
             android:gravity="left"
             android:text="@string/earningProcess1"
-            android:textSize="9pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a" />
 
         <TextView
             android:id="@+id/textView25"
@@ -169,7 +178,8 @@
             android:layout_marginStart="28dp"
             android:gravity="left"
             android:text="@string/earningProcess2"
-            android:textSize="9pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a" />
 
         <TextView
             android:id="@+id/textView26"
@@ -179,7 +189,8 @@
             android:layout_marginStart="28dp"
             android:gravity="left"
             android:text="@string/earningProcess3"
-            android:textSize="9pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a" />
 
     </LinearLayout>
 

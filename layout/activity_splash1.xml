@@ -16,6 +16,7 @@
         android:autoSizeMaxTextSize="23pt"
         android:text="@string/digitalBikes"
         android:textSize="20pt"
+        android:textColor="#00003a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

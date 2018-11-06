@@ -10,10 +10,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class More extends AppCompatActivity {
 
-    Button Bsafe,Bcred,Babout,Bpfile,Bspt,Bhist,Bhm,Bpark, Bsafe1;
+    Button Bcred,Bpfile,Bhist,Bhm,Bpark, Bsafe1;
+
+    TextView  Bsafe,Bspt,Babout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

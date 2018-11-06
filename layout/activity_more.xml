@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.samuelhimself.bible1.More"
-    android:background="#ffffff"
     >
 
     <include layout="@layout/apptoolbar"
@@ -13,81 +12,83 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="307dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233">
 
-        <Button
+        <TextView
             android:id="@+id/st"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="45dp"
             android:background="#ffffff"
-            android:fontFamily="casual"
             android:text="@string/safetyTips"
             android:textAllCaps="false"
-            android:textSize="13pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="0.5dp"
-            android:background="#f6f6f6"
-
-            ></View>
-
-        <Button
+        <TextView
             android:id="@+id/abt"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="45dp"
             android:background="#ffffff"
-            android:fontFamily="casual"
             android:text="@string/about1"
             android:textAllCaps="false"
-            android:textSize="13pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="0.5dp"
-            android:background="#f6f6f6"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
 
-            ></View>
-
-        <Button
+        <TextView
             android:id="@+id/tad"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="45dp"
             android:background="#ffffff"
             android:onClick="TACwebsite"
-            android:fontFamily="casual"
             android:text="@string/termsAndConditions"
             android:textAllCaps="false"
-            android:textSize="13pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="0.5dp"
-            android:background="#f6f6f6"
-
-            ></View>
-
-        <Button
+        <TextView
             android:id="@+id/spt"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="45dp"
             android:background="#ffffff"
-            android:fontFamily="casual"
             android:text="@string/support"
-            android:textAllCaps="false"
-            android:textSize="13pt" />
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
 
 
     </LinearLayout>
@@ -105,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:background="#ffffff"
+
         >
         <Button
             android:id="@+id/hm1"
@@ -117,7 +118,8 @@
             android:textAllCaps="false"
             android:textSize="7pt"
             android:fontFamily="sans-serif"
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             />
 
         <Button
@@ -130,7 +132,8 @@
             android:textAllCaps="false"
             android:textSize="7pt"
             android:fontFamily="sans-serif"
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             />
 
 
@@ -144,7 +147,8 @@
             android:textAllCaps="false"
             android:textSize="7pt"
             android:fontFamily="sans-serif"
-            android:background="#ffffff"
+            android:background="#fafafa"
+            android:textColor="#00003a"
             />
 
 

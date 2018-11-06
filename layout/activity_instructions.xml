@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     tools:context="com.example.samuelhimself.bible1.Instructions">
 
     <include layout="@layout/apptoolbar"
@@ -25,7 +24,8 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:background="#ffffff"
+            android:textColor="#00003a"
+            android:background="#fafafa"
             android:id="@+id/hm9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,7 +38,8 @@
 
         <Button
             android:id="@+id/safety3"
-            android:background="#ffffff"
+            android:textColor="#00003a"
+            android:background="#fafafa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -50,7 +51,8 @@
 
 
         <Button
-            android:background="#ffffff"
+            android:textColor="#00003a"
+            android:background="#fafafa"
             android:id="@+id/more9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -88,6 +90,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:background="#ffffff"
             android:orientation="vertical">
 
             <TextView
@@ -97,6 +100,7 @@
                 android:layout_marginTop="16dp"
                 android:text="1. Use Digital Bikes app to get a bike near you."
                 android:textSize="10pt"
+                android:textColor="#00003a"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.823"
                 app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +113,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="164dp"
                 android:text="2. Ride Bike"
+                android:textColor="#00003a"
                 android:textSize="10pt"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.646"
@@ -123,6 +128,7 @@
                 android:layout_marginTop="260dp"
                 android:text="3. Park Bike at any Digital Bikes parking points."
                 android:textSize="9pt"
+                android:textColor="#00003a"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.805"
                 app:layout_constraintStart_toStartOf="parent"
@@ -137,6 +143,7 @@
                 android:layout_marginTop="352dp"
                 android:text="4. Please make sure you lock the bike."
                 android:textSize="9pt"
+                android:textColor="#00003a"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -150,6 +157,7 @@
                 android:layout_marginTop="400dp"
                 android:text="5. Return bike at any Digital Bikes parking points."
                 android:textSize="9pt"
+                android:textColor="#00003a"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.307"
                 app:layout_constraintStart_toStartOf="parent"

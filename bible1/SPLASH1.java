@@ -34,15 +34,15 @@ public class SPLASH1 extends AppCompatActivity {
 
                     if (prefl.getBoolean(LOGIN_STATUS_KEY,false)){
 
-//                        if (prefb.getBoolean(RENT_BIKE_KEY,true)){
-//                            Intent int3=new Intent(SPLASH1.this,returnBike.class);
-//                            startActivity(int3);
-//                            finish();
-//                        }else {
+                        if (prefb.getBoolean(RENT_BIKE_KEY,true)){
+                            Intent int3=new Intent(SPLASH1.this,returnBike.class);
+                            startActivity(int3);
+                            finish();
+                        }else {
                             Intent intent= new Intent(SPLASH1.this,MainActivity.class);
                 startActivity(intent);
                 finish();
-//                        }
+                        }
                     }else{
                     Intent intent= new Intent(SPLASH1.this,LOGIN.class);
                     startActivity(intent);

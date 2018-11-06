@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -61,9 +63,17 @@ public class Support extends AppCompatActivity {
                 Log.d("DIAL","CLICKED CALLING-------------");
             }
         });
+
+
+//send mail*******************************
+        Bhom=findViewById(R.id.sendemail);
+        Bhom.setText(Html.fromHtml("<a href=\"mailto:samuelmugabi2@gmail.com\">Send Feedback</a>"));
+        Bhom.setMovementMethod(LinkMovementMethod.getInstance());
+
         //  -------------toolbar---------
         Toolbar toolbar =findViewById(R.id.supporttoolbar);
         setSupportActionBar(toolbar);
+
 
 
     }

@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -96,6 +97,12 @@ public class registration extends AppCompatActivity {
                 }
                     break;
         }
+    }
+    public void TACwebsite(View view){
+        Intent browserIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("http://stardigitalbikes.com/terms_and_conditions.php"));
+        startActivity(browserIntent);
     }
 
     public void pogless() {

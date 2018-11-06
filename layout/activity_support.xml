@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.samuelhimself.bible1.Support">
@@ -15,7 +14,6 @@
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:background="#ffffff"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -26,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:background="#ffffff"
+            android:background="#fafafa"
             android:id="@+id/hm15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,11 +33,12 @@
             android:fontFamily="sans-serif"
             android:text="@string/home"
             android:textAllCaps="false"
-            android:textSize="7pt" />
+            android:textSize="7pt"
+            android:textColor="#00003a" />
 
         <Button
             android:id="@+id/safety5"
-            android:background="#ffffff"
+            android:background="#fafafa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -47,11 +46,12 @@
             android:fontFamily="sans-serif"
             android:text="@string/safetyTips"
             android:textAllCaps="false"
-            android:textSize="7pt" />
+            android:textSize="7pt"
+            android:textColor="#00003a" />
 
 
         <Button
-            android:background="#ffffff"
+            android:background="#fafafa"
             android:id="@+id/more15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,20 +60,22 @@
             android:fontFamily="sans-serif"
             android:text="@string/more"
             android:textAllCaps="false"
-            android:textSize="7pt" />
+            android:textSize="7pt"
+            android:textColor="#00003a" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="329dp"
-        android:layout_height="123dp"
+        android:layout_width="280dp"
+        android:layout_height="102dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
+        android:padding="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
@@ -81,48 +83,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.14">
 
-        <LinearLayout
+
+        <Button
+            android:id="@+id/callhelp"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/phone_draw4"
+            android:text="@string/callHelpLine"
+            android:textAllCaps="false"
+            android:textColor="#00003a" />
 
-            <Button
-                android:id="@+id/callhelp"
-                android:layout_width="309dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/callHelpLine" />
-        </LinearLayout>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/sendemail"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/sendemail"
-                android:layout_width="309dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/sendFeedback" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/send_draw2"
+            android:text="@string/sendFeedback"
+            android:textAllCaps="false"
+            android:textColor="#00003a" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:gravity="left"
-        android:text="@string/getInTouch"
-        android:textSize="12pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView35"
@@ -135,6 +120,7 @@
         android:gravity="left"
         android:text="@string/visitOurOffices"
         android:textSize="10pt"
+        android:textColor="#00003a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.382"
@@ -188,29 +174,34 @@
             android:layout_height="wrap_content"
             android:text="CHURCH HOUSE"
             android:textAllCaps="false"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:textColor="#00003a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Office 001"
             android:textAllCaps="false"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:textColor="#00003a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kampala Road"
             android:textAllCaps="false"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:textColor="#00003a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="P.O.BOX 416"
             android:textAllCaps="false"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:textColor="#00003a"/>
 
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
