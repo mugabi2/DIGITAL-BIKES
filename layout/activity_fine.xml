@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fine">
+
+    <TextView
+        android:id="@+id/fine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="FINE"
+        android:textSize="15pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Dear user you have a fine for not returning the bike in time"
+        android:textSize="9pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fine1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#cf4e34"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViw29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bike Number:"
+                android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/finebikeno1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fineduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration:"
+                android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/fineduration1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#cf4e34"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textVie29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Taken:"
+                android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="5pt" />
+
+            <TextView
+                android:id="@+id/timetaken1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time meant to return was:"
+                android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/timeshouldreturn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#cf4e34"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of bike return:"
+                android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/timereturned1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00cccc"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A fine of:"
+                android:textSize="9pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/finecash1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10pt" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#203346"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="The fine charge is 2000 per hour"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="7pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Clear The Fine"
+        android:textAllCaps="false"
+        android:onClick="clearfine"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+        app:layout_constraintVertical_bias="0.8" />
+
+</android.support.constraint.ConstraintLayout>

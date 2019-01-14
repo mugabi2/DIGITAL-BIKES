@@ -81,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631">
+        app:layout_constraintVertical_bias="0.771">
 
         <RadioButton
             android:id="@+id/cash1"
@@ -117,14 +117,14 @@
         android:gravity="center"
         android:text="@string/paymentMethod"
         android:textAllCaps="false"
-        android:textSize="15pt"
         android:textColor="#00003a"
+        android:textSize="15pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.651" />
 
     <Button
         android:id="@+id/proceed"
@@ -162,14 +162,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/duration"
-        android:textSize="15pt"
         android:textColor="#00003a"
+        android:textSize="15pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -184,6 +184,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.261">
+
+        <RadioButton
+            android:id="@+id/twenty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="20 minutes"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
+        <RadioButton
+            android:id="@+id/one1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="1 hour"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
+        <RadioButton
+            android:id="@+id/two1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="2 hours"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
+        <RadioButton
+            android:id="@+id/three1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="3 hours"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
+        <RadioButton
+            android:id="@+id/four1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="4 hours"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
+        <RadioButton
+            android:id="@+id/five1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedDuration"
+            android:text="5 hours"
+            android:textSize="11pt"
+            android:textColor="#00003a" />
 
         <RadioButton
             android:id="@+id/halftime"
@@ -219,6 +268,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seeking1"
+        android:layout_width="191dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
 
 </android.support.constraint.ConstraintLayout>
