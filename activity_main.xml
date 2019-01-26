@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff">
+
+
+    <include layout="@layout/apptoolbar"
+        android:id="@+id/homeToolbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="203dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="267dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="#00003a"
+                android:background="#ffffff"
+                android:text="@string/rentABike"
+                android:fontFamily="casual"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/bike144"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/inst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:textColor="#00003a"
+                android:gravity="center"
+                android:fontFamily="casual"
+                android:drawableTop="@drawable/inst5"
+                android:text="@string/tutorial"
+                android:textAllCaps="false"
+                android:textSize="7pt" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <Button
+
+                android:id="@+id/evt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:textColor="#00003a"
+                android:fontFamily="casual"
+                android:drawableTop="@drawable/ic_events3"
+                android:text="@string/events"
+                android:textAllCaps="false"
+                android:textSize="7pt"
+                />
+            <Button
+                android:id="@+id/prom"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:textColor="#00003a"
+                android:fontFamily="casual"
+                android:drawableTop="@drawable/share3"
+                android:text="@string/share"
+                android:textAllCaps="false"
+                android:textSize="7pt" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#f6f6f6" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+
+            android:id="@+id/hm0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:textColor="#00003a"
+            android:drawableTop="@drawable/ic_home13"
+            android:fontFamily="sans-serif"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/safety1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fffffF"
+            android:textColor="#00003a"
+            android:drawableTop="@drawable/ic_safe1"
+            android:fontFamily="sans-serif"
+            android:text="@string/safetyTips"
+            android:textAllCaps="false"
+            android:textSize="7pt" />
+
+
+        <Button
+            android:id="@+id/more1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fffffF"
+            android:textColor="#00003a"
+            android:drawableTop="@drawable/ic_more"
+            android:fontFamily="sans-serif"
+            android:text="@string/more"
+            android:textAllCaps="false"
+            android:textSize="6pt" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161"
+        app:srcCompat="@drawable/bicycle3s1" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

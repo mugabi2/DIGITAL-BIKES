@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuelhimself.bible1.More"
+    >
+
+    <include layout="@layout/apptoolbar"
+        android:id="@+id/moretoolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="307dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233">
+
+        <TextView
+            android:id="@+id/st"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:text="@string/safetyTips"
+            android:textAllCaps="false"
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/abt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:text="@string/about1"
+            android:textAllCaps="false"
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/tad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:onClick="TACwebsite"
+            android:text="@string/termsAndConditions"
+            android:textAllCaps="false"
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:textAllCaps="false"
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/spt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:text="@string/support"
+            android:textSize="9pt"
+            android:textColor="#00003a"
+            android:paddingTop="9dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+
+        >
+        <Button
+            android:id="@+id/hm1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_home2"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#fafafa"
+            android:textColor="#00003a"
+            />
+
+        <Button
+            android:id="@+id/st1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_safe1"
+            android:text="@string/safetyTips"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#fafafa"
+            android:textColor="#00003a"
+            />
+
+
+        <Button
+            android:drawableTop="@drawable/ic_more12"
+            android:id="@+id/more2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/more"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:background="#fafafa"
+            android:textColor="#00003a"
+            />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuelhimself.bible1.SafetyTips">
+
+
+    <include
+        android:id="@+id/safetoolbar"
+        layout="@layout/apptoolbar" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/hm14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fafafa"
+            android:drawableTop="@drawable/ic_home2"
+            android:fontFamily="sans-serif"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:textColor="#00003a"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fafafa"
+            android:drawableTop="@drawable/ic_safe2"
+            android:fontFamily="sans-serif"
+            android:text="@string/safetyTips"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:textColor="#00003a"/>
+
+
+        <Button
+            android:id="@+id/more14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fafafa"
+            android:drawableTop="@drawable/ic_more"
+            android:fontFamily="sans-serif"
+            android:text="@string/more"
+            android:textAllCaps="false"
+            android:textSize="7pt"
+            android:textColor="#00003a"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="368dp"
+        android:layout_height="0.5dp"
+        android:background="#f6f6f6"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <ScrollView
+        android:layout_width="284dp"
+        android:layout_height="431dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Inspect, Then Ride"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The team works hard to maintain each bicycle but it’s important to ensure that tires are inflated and brakes operate correctly before you ride. Bike riders should also adjust their seat height accordingly. "
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Limit your speed."
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every rider should use a speed they can handle. No need to go fast."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Brake Early and Gradually"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Always brake early and gradually especially when going downhill. "
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Use both brakes"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bike riders should use both brakes at the same time. "
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Follow Traffic Laws"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yield to pedestrians, ride in the direction of traffic, use hand signals, keep left, and come to a complete stop at red lights and follow signs. "
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6. Make sure motorists can see you"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ride in a position where you can see and be seen, consider wearing bright or reflective clothing Avoid riding in other vehicles’ blind spots."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7. Use your bell"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not all pedestrians can see you."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8. Attention!"
+                android:textAllCaps="false"
+                android:textSize="12pt"
+                android:textColor="#00003a"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Never cycle along the inside of large vehicles, such as lorries and buses, especially at junctions."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Be mindful of large vehicles making wide turns."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Be watchful of stones on the road."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Do not use mobile devices to talk or text while riding."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textAllCaps="false"
+                android:textSize="9pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Never ride under the influence of drugs or alcohol."
+                android:textAllCaps="false"
+                android:textSize="9pt"
+                android:textColor="#00003a"/>
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
